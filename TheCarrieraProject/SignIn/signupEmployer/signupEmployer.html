@@ -36,23 +36,28 @@
 			<div class="login100-more"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="../../../connectRecruitSignup.php" method="POST">
 					<span class="login100-form-title p-b-59">
 						Employer Sign Up
 					</span>
+                    <div class="wrap-input100 validate-input" data-validate = "Name is required">
+						<span class="label-input100">Company</span>
+						<input class="input100" type="number" name="company_id" placeholder="Company Number...">
+						<span class="focus-input100"></span>
+					</div> 
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">First Name</span>
-						<input class="input100" type="text" name="name" placeholder="First Name...">
+						<input class="input100" type="text" name="first_name" placeholder="First Name...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Last Name</span>
-						<input class="input100" type="text" name="name" placeholder="Last Name...">
+						<input class="input100" type="text" name="last_name" placeholder="Last Name...">
 						<span class="focus-input100"></span>
 					</div>
-					<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<!--<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Age</span>
 						<input class="input100" type="text" name="name" placeholder="Age...">
 						<span class="focus-input100"></span>
@@ -61,25 +66,25 @@
 						<span class="label-input100">Birthday</span>
 						<input class="input100" type="text" name="name" placeholder="Birthday...">
 						<span class="focus-input100"></span>
-					</div>
+					</div> -->
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
+						<input class="input100" type="text" name="email_address" placeholder="Email address...">
 						<span class="focus-input100"></span>
 					</div>
 
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
+						<input class="input100" type="password" name="password" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
+					<!--<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
 						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
 						<span class="focus-input100"></span>
-					</div>
+					</div> -->
 
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
@@ -100,9 +105,10 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+                                <input class="login100-form-btn" type="submit" name="Sign Up">
+							<!--<button class="login100-form-btn">
 								Sign Up
-							</button>
+							</button> -->
 						</div>
 
 						<a href="#" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
