@@ -1,11 +1,12 @@
 <?php
+$company = $_POST['company_id'];
 $firstname = $_POST['first_name'];
 $lastname = $_POST['last_name'];
 $emailaddress = $_POST['email_address'];
 $password = $_POST['password'];
 
 
-if(!empty($firstname) || !empty($lastname) || !empty($emailaddress) || !empty($password)){
+if(!empty($company) ||!empty($firstname) || !empty($lastname) || !empty($emailaddress) || !empty($password)){
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
@@ -18,7 +19,7 @@ if(!empty($firstname) || !empty($lastname) || !empty($emailaddress) || !empty($p
         die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else { */
     $SELECT = "SELECT email_address FROM recruiter WHERE email_address = ? Limit 1";
-    $INSERT = "INSERT INTO recruiter (first_name, last_name, email_address, password) values(?, ?, ?, ?)";
+    $INSERT = "INSERT INTO recruiter (company_id, first_name, last_name, email_address, password) values(?, ?, ?, ?, ?)";
 
     //Prepare statement
     $stmt = $conn->prepare($SELECT);
@@ -32,7 +33,7 @@ if(!empty($firstname) || !empty($lastname) || !empty($emailaddress) || !empty($p
         $stmt->close();
 
         $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("ssss", $firstname, $lastname, $emailaddress, $password);
+        $stmt->bind_param("issss", $company, $firstname, $lastname, $emailaddress, $password);
         $stmt->execute();
         echo "New record successfully inserted into DB!";
     } else {
