@@ -1,6 +1,6 @@
 <?php
 session_start();
 if(session_destroy()){
-    header("Location: ./TheCarrieraProject/SignIn/index.html");
+    header("Location: ./TheCarrieraProject/index.html");
 }
 ?>
