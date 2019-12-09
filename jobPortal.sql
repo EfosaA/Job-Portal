@@ -11,7 +11,7 @@ CREATE TABLE job_seeker (
     birthday    	DATE 														 ,
     email_address 	VARCHAR(45)											 NOT NULL,
     password 		VARCHAR(25)											 NOT NULL,
-    resume			VARCHAR(100)							
+    resume			VARCHAR(750)							
 );
 
 

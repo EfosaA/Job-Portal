@@ -35,7 +35,7 @@ if(!empty($company) ||!empty($firstname) || !empty($lastname) || !empty($emailad
         $stmt = $conn->prepare($INSERT);
         $stmt->bind_param("issss", $company, $firstname, $lastname, $emailaddress, $password);
         $stmt->execute();
-        echo "New record successfully inserted into DB!";
+        header('Location: ./TheCarrieraProject/SignIn/homePage/homepage.html');
     } else {
         echo "Someone already registered with that email";
     }
